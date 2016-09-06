@@ -23,7 +23,7 @@ my-angular-app {
 	flex-direction: column;
 }
 
-h1 {
+h1, h2 {
 	font-family: "infini-romain", sans-serif;
 	color: #fff;
 	text-align: center;

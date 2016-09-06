@@ -9,19 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var name = "Guillaume Barranco";
-var template = "<h1>My First Angular 2 App at ECV</h1>\n\t<div>By " + name + "</div>";
-var AppComponent = (function () {
-    function AppComponent() {
+var hero_1 = require('./../classes/hero');
+var HeroDetailComponent = (function () {
+    function HeroDetailComponent() {
     }
-    AppComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', hero_1.Hero)
+    ], HeroDetailComponent.prototype, "hero", void 0);
+    HeroDetailComponent = __decorate([
         core_1.Component({
-            selector: 'my-angular-app',
-            template: template
+            selector: 'my-hero-detail',
+            template: "\n\t\t<div *ngIf=\"hero\">\n\t\t<h2>{{hero.name}} details!</h2>\n\t\t<div><label>id: </label>{{hero.id}}</div>\n\t\t<div><label>state: </label>{{hero.state}}</div>\n\t\t<div>\n\t\t\t<label>name: </label>\n\t\t\t<input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n\t\t</div>\n\t\t</div>\n\t"
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], HeroDetailComponent);
+    return HeroDetailComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.HeroDetailComponent = HeroDetailComponent;
+//# sourceMappingURL=hero-detail.component.js.map
