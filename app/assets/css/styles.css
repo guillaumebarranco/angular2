@@ -1,0 +1,30 @@
+body {
+	background-color: #000;
+	overflow-y: hidden;
+	color: #fff;
+	font-family: sans-serif;
+}
+
+@font-face {
+	font-family: "RemachineScript";
+	src: url('../fonts/RemachineScript.otf');
+}
+
+@font-face {
+	font-family: "infini-romain";
+	src: url('../fonts/infini-romain.otf');
+}
+
+my-angular-app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+}
+
+h1 {
+	font-family: "infini-romain", sans-serif;
+	color: #fff;
+	text-align: center;
+}
