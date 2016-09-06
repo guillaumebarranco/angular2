@@ -16,10 +16,11 @@ const heroes: Hero[] = [];
 	`
 	    <h1>{{title}}</h1>
 
-		<div>
-	    	<h2>My Books</h2>
-	    	<my-book></my-book>
-	    </div>
+	    <a routerLink="/heroes">Heroes</a>
+   		<router-outlet></router-outlet>
+
+   		<a routerLink="/books">Books</a>
+   		<router-outlet></router-outlet>
 
 	    <h2>My classmates (hover for the state)</h2>
 
@@ -35,7 +36,6 @@ const heroes: Hero[] = [];
 				<strong>{{hero.name}}</strong>
 			</li>
 	    </ul>
-	    <my-hero-detail [hero]="selectedHero"></my-hero-detail>
 	`
   ,
   styles: [`

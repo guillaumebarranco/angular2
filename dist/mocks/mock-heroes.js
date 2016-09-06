@@ -9,7 +9,6 @@
  */
 function rand(min, max) {
     var rand = Math.floor(Math.random() * (max - min + 1)) + min;
-    console.log(rand);
     return rand;
 }
 var states = [

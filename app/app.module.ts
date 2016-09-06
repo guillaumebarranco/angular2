@@ -4,16 +4,20 @@ import { FormsModule }   from '@angular/forms';
 import { AppComponent }  from './app.component';
 import { HeroDetailComponent } from './components/hero-detail.component';
 import { BookComponent } from './components/book-detail.component';
+import { HeroesComponent } from './components/heroes.component';
+import { routing } from './app.routing';
 
 @NgModule({
 	imports: [
 		BrowserModule,
-		FormsModule
+		FormsModule,
+		routing
 	],
 	declarations: [
 		AppComponent,
 		HeroDetailComponent,
-		BookComponent
+		BookComponent,
+		HeroesComponent
 	],
 	bootstrap: [ AppComponent ]
 })
