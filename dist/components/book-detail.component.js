@@ -9,26 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var BOOKS = [
-    {
-        name: "Js Ninja",
-        pages: 120
-    },
-    {
-        name: "MEAN Stack",
-        pages: 298
-    }
-];
+var book_service_1 = require('./../services/book.service');
 var BookComponent = (function () {
-    function BookComponent() {
-        this.books = BOOKS;
+    function BookComponent(bookService) {
+        this.bookService = bookService;
     }
+    BookComponent.prototype.getBooks = function () {
+        var _this = this;
+        this.bookService.getBooks().then(function (books) { return _this.books = books; });
+    };
+    BookComponent.prototype.ngOnInit = function () {
+        this.getBooks();
+    };
     BookComponent = __decorate([
         core_1.Component({
             selector: 'my-book',
-            template: "\n\t\t<div *ngFor=\"let book of books\">\n\t\t\t<div>{{book.name}} with {{book.pages}} pages</div>\n\t\t</div>\n\t"
+            template: "\n\t\t<div *ngFor=\"let book of books\">\n\t\t\t<div>{{book.name}} with {{book.pages}} pages</div>\n\t\t</div>\n\t",
+            providers: [book_service_1.BookService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [book_service_1.BookService])
     ], BookComponent);
     return BookComponent;
 }());

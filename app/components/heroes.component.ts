@@ -1,5 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
+
+/** Importation du Component de la Class hero */
 import { Hero } from './../classes/hero';
+
+/** Importation du Service hero */
 import { HeroService } from './../services/hero.service';
 
 @Component({
@@ -7,7 +11,7 @@ import { HeroService } from './../services/hero.service';
 	template: `
 		<h2>My classmates (hover for the state)</h2>
 		<ul class="heroes">
-	    	
+
 			<li 
 				*ngFor="let hero of heroes"
 				[class.selected]="hero === selectedHero"
@@ -95,7 +99,6 @@ import { HeroService } from './../services/hero.service';
 })
 
 export class HeroesComponent implements OnInit {
-	hero: Hero;
 
 	heroes: Hero[];
 	selectedHero: Hero;

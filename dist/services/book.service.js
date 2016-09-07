@@ -8,21 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/** Importation du systeme de Component */
 var core_1 = require('@angular/core');
-/** Component definition */
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Wat is dat class';
+var mock_books_1 = require('./../mocks/mock-books');
+var BookService = (function () {
+    function BookService() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-angular-app',
-            template: "\n\t    <h1>{{title}}</h1>\n\n\t    <a routerLink=\"/heroes\">Heroes</a>\n   \t\t<router-outlet></router-outlet>\n\n   \t\t<a routerLink=\"/books\">Books</a>\n   \t\t<router-outlet></router-outlet>\n\t"
-        }), 
+    BookService.prototype.getBooks = function () {
+        return Promise.resolve(mock_books_1.BOOKS);
+    };
+    BookService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], BookService);
+    return BookService;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.BookService = BookService;
+//# sourceMappingURL=book.service.js.map

@@ -1,11 +1,5 @@
 /** Importation du systeme de Component */
-import { Component, OnInit } from '@angular/core';
-
-/** Importation du Component de la Class hero */
-import { Hero } from './classes/hero';
-import { Book } from './classes/book';
-
-const heroes: Hero[] = [];
+import { Component } from '@angular/core';
 
 /** Component definition */
 @Component({
@@ -25,7 +19,7 @@ const heroes: Hero[] = [];
 /**
  * Class returning the main Component for the application
  */
-export class AppComponent implements OnInit {
+export class AppComponent {
 
 	title = 'Wat is dat class';
 }

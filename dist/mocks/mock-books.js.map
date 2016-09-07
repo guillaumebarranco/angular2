@@ -1,0 +1,1 @@
+{"version":3,"file":"mock-books.js","sourceRoot":"","sources":["../../app/mocks/mock-books.ts"],"names":[],"mappings":";AAEa,aAAK,GAAW;IAC5B;QACC,IAAI,EAAE,UAAU;QAChB,KAAK,EAAE,GAAG;KACV;IACD;QACC,IAAI,EAAE,YAAY;QAClB,KAAK,EAAE,GAAG;KACV;CACD,CAAC"}
